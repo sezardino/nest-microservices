@@ -1,0 +1,17 @@
+{
+  "name": "@nest-microservices/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "devDependencies": {
+    "@nestjs/schematics": "^11.0.0",
+    "@nx/js": "21.4.0",
+    "@nx/nest": "^21.4.0",
+    "nx": "21.4.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {}
+}
