@@ -1,0 +1,24 @@
+{
+  "name": "@nest-microservices/api-gateway-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "implicitDependencies": [
+    "@nest-microservices/api-gateway"
+  ],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{e2eProjectRoot}"
+      ],
+      "options": {
+        "jestConfig": "apps/api-gateway-e2e/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "dependsOn": [
+        "@nest-microservices/api-gateway:build",
+        "@nest-microservices/api-gateway:serve"
+      ]
+    }
+  }
+}
